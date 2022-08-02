@@ -1,0 +1,10 @@
+# Run the colabfold search scripts in bulk:
+for i in [standard dir name]{001..[max file number]} ; do (cd "$i" && $echo qsub colab_search.sh) ; done
+
+# Run the colabfold predict scripts in bulk:
+for i in [standard dir name]{001..[max file number]} ; do (cd "$i" && $echo qsub colab_predict.sh) ; done
+
+# e.g.
+for i in 20220802_af2_{001..020} ; do (cd "$i" && $echo qsub colab_search.sh) ; done
+
+for i in 20220802_af2_{001..020} ; do (cd "$i" && $echo qsub colab_predict.sh) ; done
